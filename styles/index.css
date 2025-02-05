@@ -1,0 +1,142 @@
+.content-container {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    animation: fade-in 1s ease-in;
+  }
+  
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .app-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .app-logo:hover {
+    transform: scale(1.1);
+  }
+  
+  .app-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  
+  .form-container {
+    background: rgba(33, 33, 33, 0.9);
+    border: 1px solid #424242;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    animation: slide-up 0.8s ease-out;
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #eeeeee;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #bdbdbd;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #424242;
+    border-radius: 4px;
+    background: #424242;
+    color: #ffffff;
+    outline: none;
+  }
+  
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #424242 inset;
+    box-shadow: 0 0 0 1000px #424242 inset;
+    -webkit-text-fill-color: #fff;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #ff9800;
+    color: #212121;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+  }
+  
+  .alert-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .alert {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .alert-success {
+    background-color: #4caf50;
+  }
+  
+  .alert-error {
+    background-color: #f44336;
+  }
+  
+  @media (max-width: 480px) {
+    .content-container {
+      padding: 30px 10px;
+    }
+    .app-title {
+      font-size: 1.5rem;
+    }
+    .form-container {
+      margin-bottom: 20px;
+    }
+  }
+  
