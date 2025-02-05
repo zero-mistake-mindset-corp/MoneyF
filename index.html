@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>smik-money — Authorization</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="abstract-background">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path
+        fill="#444"
+        fill-opacity="0.7"
+        d="M0,192L30,186.7C60,181,120,171,180,154.7C240,139,300,117,360,101.3C420,85,480,75,540,96C600,117,660,171,720,192C780,213,840,203,900,181.3C960,160,1020,128,1080,122.7C1140,117,1200,139,1260,165.3C1320,192,1380,224,1410,240L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+      ></path>
+    </svg>
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path
+        fill="#666"
+        fill-opacity="0.4"
+        d="M0,96L60,112C120,128,240,160,360,160C480,160,600,128,720,138.7C840,149,960,203,1080,229.3C1200,256,1320,256,1380,256L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+      ></path>
+    </svg>
+  </div>
+
+  <div id="alertContainer" class="alert-container"></div>
+
+  <div class="content-container">
+
+    <div class="logo-section">
+      <img src="icons/logo.png" alt="smik-money logo" class="app-logo" />
+      <h1 class="app-title">smik-money</h1>
+    </div>
+
+    <div class="form-container">
+      <h2>Log in</h2>
+      <form id="signInForm">
+        <div class="input-group">
+          <label for="usernameSignIn">Username:</label>
+          <input type="text" id="usernameSignIn" required />
+        </div>
+
+        <div class="input-group">
+          <label for="passwordSignIn">Password:</label>
+          <input type="password" id="passwordSignIn" required />
+        </div>
+
+        <button type="submit" class="btn-submit">Log in</button>
+      </form>
+    </div>
+
+    <div class="form-container" id="twoFactorAuthContainer" style="display: none;">
+      <h2>Two-Factor Authentication</h2>
+      <form id="twoFactorForm">
+        <p>Enter the authentication code sent to your email:</p>
+        <div class="input-group">
+          <input type="text" id="twoFactorCodeInput" required />
+        </div>
+        <button type="submit" class="btn-submit">Confirm</button>
+      </form>
+    </div>
+
+    <div class="form-container" id="signUpContainer">
+      <h2>Registration</h2>
+      <form id="signUpForm">
+        <div class="input-group">
+          <label for="usernameSignUp">Username:</label>
+          <input type="text" id="usernameSignUp" required />
+        </div>
+
+        <div class="input-group">
+          <label for="emailSignUp">Email:</label>
+          <input type="text" id="emailSignUp" required />
+        </div>
+
+        <div class="input-group">
+          <label for="passwordSignUp">Password:</label>
+          <input type="password" id="passwordSignUp" required />
+        </div>
+
+        <button type="submit" class="btn-submit">Sign up</button>
+      </form>
+    </div>
+
+    <div class="form-container" id="emailConfirmationContainer" style="display: none;">
+      <h2>Confirm Email</h2>
+      <form id="confirmEmailForm">
+        <p>Enter the code sent to your email:</p>
+        <div class="input-group">
+          <label for="emailCodeInput">Confirmation code:</label>
+          <input type="text" id="emailCodeInput" required />
+        </div>
+        <button type="submit" class="btn-submit">Confirm</button>
+      <div class="resend-code"style="margin-top: 15px;">
+        <button id="resendCodeBtn" class="btn-submit" disabled>Resend code</button>
+        <span id="resendTimerText" style="margin-top: 20px;"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./dist/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>smik-money — Dashboard</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="abstract-background">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path
+        fill="#444"
+        fill-opacity="0.7"
+        d="M0,192L30,186.7C60,181,120,171,180,154.7C240,139,300,117,360,101.3C420,85,480,75,540,96C600,117,660,171,720,192C780,213,840,203,900,181.3C960,160,1020,128,1080,122.7C1140,117,1200,139,1260,165.3C1320,192,1380,224,1410,240L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,840,0,720,0C600,0,480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+      ></path>
+    </svg>
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path
+        fill="#666"
+        fill-opacity="0.4"
+        d="M0,96L60,112C120,128,240,160,360,160C480,160,600,128,720,138.7C840,149,960,203,1080,229.3C1200,256,1320,256,1380,256L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+      ></path>
+    </svg>
+  </div>
+
+  <div id="alertContainer" class="alert-container"></div>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Menu</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="#" class="sidebar-link">
+              <span class="icon-square">🏠</span>
+              <span class="link-text">Main</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">
+              <span class="icon-square">🙍</span>
+              <span class="link-text">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">
+              <span class="icon-square">💰</span>
+              <span class="link-text">Money accounts</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">
+              <span class="icon-square">🔁</span>
+              <span class="link-text">Transactions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">
+              <span class="icon-square">⬆</span>
+              <span class="link-text">Income Types</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">
+              <span class="icon-square">⬇</span>
+              <span class="link-text">Expense Type</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">
+              <span class="icon-square">📊</span>
+              <span class="link-text">Statistics</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logoutBtn" class="btn-logout">
+          Выйти
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h1>Account Balance</h1>
+      <div id="accountsContainer" class="accounts-container">
+      </div>
+    </main>
+  </div>
+
+  <script src="./dist/dashboard.js"></script>
+</body>
+</html>
