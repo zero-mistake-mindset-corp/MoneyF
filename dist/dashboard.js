@@ -22,7 +22,7 @@ function fetchAccounts() {
             return [];
         }
         try {
-            const response = yield fetch('https://localhost:7022/MoneyAccounts', {
+            const response = yield fetch('http://localhost:8080/MoneyAccounts', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -45,20 +45,17 @@ function renderAccounts(accounts) {
     if (!container)
         return;
     container.innerHTML = '';
-    if (!accounts || accounts.length === 0) {
-        const addCard = document.createElement('div');
-        addCard.classList.add('account-card', 'add-new');
-        const iconDiv = document.createElement('div');
-        iconDiv.classList.add('account-icon');
-        iconDiv.textContent = '+';
-        addCard.appendChild(iconDiv);
-        const nameDiv = document.createElement('div');
-        nameDiv.classList.add('account-name');
-        nameDiv.textContent = 'Добавить аккаунт';
-        addCard.appendChild(nameDiv);
-        container.appendChild(addCard);
-        return;
-    }
+    const addCard = document.createElement('div');
+    addCard.classList.add('account-card', 'add-new');
+    const iconDiv = document.createElement('div');
+    iconDiv.classList.add('account-icon');
+    iconDiv.textContent = '+';
+    addCard.appendChild(iconDiv);
+    const nameDiv = document.createElement('div');
+    nameDiv.classList.add('account-name');
+    nameDiv.textContent = 'Добавить аккаунт';
+    addCard.appendChild(nameDiv);
+    container.appendChild(addCard);
     accounts.forEach(account => {
         const card = document.createElement('div');
         card.classList.add('account-card');
